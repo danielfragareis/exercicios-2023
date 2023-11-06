@@ -31,9 +31,6 @@ class Scrapper
         $paperTitle = $aTag->getElementsByTagName('h4')->item(0)->nodeValue;
         $paperType = $aTag->getElementsByTagName('div')->item(1)->nodeValue;
         $authors = $aTag->getElementsByTagName('div')->item(0)->nodeValue;
-
-        echo "Valor de \$divVolumeInfo: " . $divVolumeInfo . PHP_EOL;
-
         $authorsList = [];
 
         foreach (explode(';', $authors) as $authorInfo) {
